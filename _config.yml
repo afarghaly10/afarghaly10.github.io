@@ -1,4 +1,4 @@
-theme: jekyll-shell-theme
+theme: jekyll-dash
 title: afarghaly.com App Galley
 description: Bookmark this to keep an eye on my project updates!
 lsi: false
@@ -13,34 +13,53 @@ kramdown:
   syntax_highlighter: rouge
 
 
-# Gems
-gems:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
+## required by disqus to display comments
+url: https://afarghaly.com
 
-jekyll-mentions:
-    base_url: https://github.com
+# jekyll-paginate
+paginate: 5
+paginate_path: "/blog/page:num/"
 
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+# jekyll-tagging (optional)
+tag_permalink_style: pretty
+tag_page_layout: tag_page
+tag_page_dir: tag
 
-# Required plugins for the theme to work properly
-plugins:
-  - jekyll-remote-theme
-  - jemoji
+# for github pages custom domains:
+# include: [CNAME]
 
-# Including jekyll-shell-theme using the jekyll-remote-theme plugin
-remote_theme: tareqdandachi/jekyll-shell-theme
+dash:
+  # the way how dates should be displayed
+  date_format: "%b %-d, %Y"
 
-sass:
-  style: compressed
+  # (optional) discqus comment configuration
+  disqus:
+    shortname: <Sami>
 
-header_pages:
-  - index.md
-  - about.md
-  - a-third-page.md
+  # the animation speed of the post scroll-in effect
+  animation_speed: 50
 
-# controls how big the shell and font looks
-font-size: small
+  # wether to enable Right-to-Left support or not
+  rtl: false
+
+  # Replaces the default avatar provider (gravatar)
+  #avatar_source: github
+  #github_username: afarghaly10
+  #avatar_source: local
+  #avatar_path: /assets/avatar.png
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    - url: https://twitter.com/bitbrain_
+      icon: twitter-square
+      color: cyan
+    - url: https://afarghaly.com
+      icon: itch-io
+      color: red
+    - url: https://github.com/afarghaly10
+      icon: github-square
+      color: purple
+
+  # wether the author box should be displayed or not
+  show_author: true
