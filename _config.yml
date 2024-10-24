@@ -1,9 +1,9 @@
-theme: jekyll-theme-yat
-title: Octocat's homepage
+theme: jekyll-shell-theme
+title: afarghaly.com App Galley
 description: Bookmark this to keep an eye on my project updates!
 lsi: false
 safe: true
-source: [your repo's top level directory]
+source: "."
 incremental: false
 highlighter: rouge
 gist:
@@ -11,3 +11,36 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+
+
+# Gems
+gems:
+  - jekyll-mentions
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
+
+jekyll-mentions:
+    base_url: https://github.com
+
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+
+# Required plugins for the theme to work properly
+plugins:
+  - jekyll-remote-theme
+  - jemoji
+
+# Including jekyll-shell-theme using the jekyll-remote-theme plugin
+remote_theme: tareqdandachi/jekyll-shell-theme
+
+sass:
+  style: compressed
+
+header_pages:
+  - index.md
+  - about.md
+  - a-third-page.md
+
+# controls how big the shell and font looks
+font-size: small
